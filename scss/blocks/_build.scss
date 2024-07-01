@@ -1,0 +1,89 @@
+.build-section {
+    background-color: $clr-bold-green;
+    background-image: url(../../images/build-section-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+    background-position: bottom right;
+}
+.build {
+    padding: 140px 0 108px;
+    @include display($items:start, $space:space-between, $gap:125px);
+}
+.build__title-wrapper {
+    max-width: 621px;
+}
+.build__title-line {
+    margin-bottom: 54px;
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background-color: $clr-span;
+}
+.build__title {
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0, $CLR:$clr-white);
+}
+.build__list {
+    margin-top: 58px;
+}
+.build__item {
+    @include display($items:start, $space:space-between, $gap:23px);
+    margin-bottom: 32px;
+}
+.build__item-content {
+}
+.build__item-title {
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:$clr-span);
+}
+.build__item-text {
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:$clr-white-opacity);
+}
+
+// -------Tablet start-------
+@media only screen and (max-width:800px){
+    .build-section{
+        padding: 100px 0 100px;
+        background-position: top right;
+    }
+    .build{
+        flex-direction: column;
+        @include display($items:0, $space:start, $gap:64px);
+    }
+    .build__title-wrapper{
+        max-width: 641px;
+        
+    }
+    .build__title-line{
+        margin-bottom: 32px;
+    }
+    .build__title{
+        width: 100%;
+    }
+    .build__item {
+        @include display($items:center, $space:space-between, $gap:23px);
+    }
+    .build__item-title {
+        @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:$clr-span);
+    }
+}
+// -------Tablet end-------
+
+// ----------Mobile start ---------
+@media (max-width:500px){
+    .build-section{
+        padding: 64px;
+    }
+    .build__list {
+        gap: 32px;
+    }
+    .build__item {
+        @include display($items:center, $space:space-between, $gap:16px);
+        flex-direction: column;
+        text-align: center;
+    }
+    .build__item-content{
+        @include display($items:center, $space:space-between, $gap:8px);
+        flex-direction: column;
+
+    }
+}
+    // ----------Mobile end ---------

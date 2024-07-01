@@ -1,0 +1,83 @@
+.hero-section{
+    background-image: url(../../images/bg-images.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position: calc(50% - 741px) top;
+}
+.hero {
+    padding-bottom: 250px;
+    background-image: url(../../images/bg-images2.svg);
+    background-repeat: no-repeat;
+    background-size: 358px 100px;
+    background-position: bottom right;
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.hero__title-wrapper {
+    width: 550px;
+}
+.hero__title {
+    @include textStyle($FS:100px, $FW:700, $LH:100px, $MB:0, $CLR:$clr-white);
+}
+.hero__title--color {
+    color: $clr-span;
+}
+.hero__text-wrapper {   
+    width: 445px;
+}
+.hero--text-top-line {
+    margin-bottom: 79px;
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    background-color: $clr-line;
+}
+.hero__text {
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0, $CLR:$clr-white);
+}
+
+// -------Tablet start-------
+@media only screen and (max-width:800px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        @include display($items:center, $space:start, $gap:24px);
+        background-position: center bottom;
+    }
+    .hero__text-top-line {
+        display: none;
+    }
+    .hero__title{
+        @include textStyle($FS:64px, $FW:700, $LH:56px, $MB:0, $CLR:$clr-white);
+    }
+    .hero__text{
+        @include textStyle($FS:15px, $FW:600, $LH:28px, $MB:0, $CLR:$clr-white);
+    }
+    .hero__title--color{
+        color: $clr-span;
+    }
+    .hero__title-wrapper, .hero__text-wrapper{
+        width: 100%;
+    }
+}
+// -------Tablet end-------
+
+// ----------Mobile start ---------
+@media (max-width:600px){
+    .hero{
+        padding-bottom: 197px;
+        @include display($items:center, $space:start, $gap:18px);
+    }
+    .hero__title{
+        @include textStyle($FS:40px, $FW:700, $LH:40px, $MB:0, $CLR:$clr-white);
+    }
+    .hero__title--color{
+        color: $clr-span;
+    }
+}
+
+@media (max-width:400px){
+    .hero{
+        background-size: 100%;
+    }
+}
+    // ----------Mobile end ---------
