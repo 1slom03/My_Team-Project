@@ -29,8 +29,6 @@
     @include display($items:start, $space:space-between, $gap:23px);
     margin-bottom: 32px;
 }
-.build__item-content {
-}
 .build__item-title {
     @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:$clr-span);
 }
@@ -41,6 +39,7 @@
 // -------Tablet start-------
 @media only screen and (max-width:800px){
     .build-section{
+        background-color: $clr-bold-green;
         padding: 100px 0 100px;
         background-position: top right;
     }
@@ -70,6 +69,7 @@
 // ----------Mobile start ---------
 @media (max-width:500px){
     .build-section{
+        background-color: $clr-bold-green;
         padding: 64px;
     }
     .build__list {
@@ -87,3 +87,8 @@
     }
 }
     // ----------Mobile end ---------
+@media (max-width:200px){
+    .build-section{
+        background-color: $clr-bold-green;
+    }
+}

@@ -335,6 +335,7 @@ body {
 
 @media only screen and (max-width: 800px) {
   .build-section {
+    background-color: rgb(1, 47, 52);
     padding: 100px 0 100px;
     background-position: top right;
   }
@@ -370,6 +371,7 @@ body {
 }
 @media (max-width: 500px) {
   .build-section {
+    background-color: rgb(1, 47, 52);
     padding: 64px;
   }
   .build__list {
@@ -389,5 +391,116 @@ body {
     justify-content: space-between;
     gap: 8px;
     flex-direction: column;
+  }
+}
+@media (max-width: 200px) {
+  .build-section {
+    background-color: rgb(1, 47, 52);
+  }
+}
+.stories-section {
+  padding: 140px 0;
+  background-image: url(../../images/stories-bg-img.svg), url(../../images/stories-bg-img-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 147px 100px, 200px 100px;
+  background-position: top left, bottom right;
+}
+
+.stories {
+  text-align: center;
+}
+
+.stories__title-wrapper {
+  max-width: 932px;
+  margin: 0 auto;
+}
+
+.stories__title {
+  margin-bottom: 56px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  color: white;
+}
+
+.stories__title--color {
+  color: rgb(121, 200, 199);
+}
+
+.stories__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.stories__item-images {
+  margin-bottom: -25px;
+}
+
+.stories__item {
+  max-width: 350px;
+}
+
+.stories__item-top-text {
+  margin-bottom: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  color: white;
+}
+
+.stories__item-title {
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgb(121, 200, 199);
+}
+
+.stories__item-bottom-text {
+  display: block;
+  margin-bottom: 32px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 18px;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .stories-section {
+    padding: 100px 0;
+  }
+  .stories__title-wrapper {
+    max-width: 573px;
+    margin: 0 auto;
+  }
+  .stories__title {
+    margin-bottom: 56px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: white;
+  }
+  .stories__title--color {
+    color: rgb(121, 200, 199);
+  }
+  .stories__list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 48px;
+    flex-direction: column;
+  }
+  .stories__item {
+    max-width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .stories-section {
+    padding: 140px 0;
+  }
+  .stories__title--color {
+    color: rgb(121, 200, 199);
   }
 }/*# sourceMappingURL=main.css.map */
