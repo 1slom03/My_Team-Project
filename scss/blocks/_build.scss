@@ -1,4 +1,5 @@
 .build-section {
+    padding: 140px 0 140px;
     background-color: $clr-bold-green;
     background-image: url(../../images/build-section-bg.svg);
     background-repeat: no-repeat;
@@ -6,11 +7,10 @@
     background-position: bottom right;
 }
 .build {
-    padding: 140px 0 108px;
-    @include display($items:start, $space:space-between, $gap:125px);
+    @include display($items:start, $space:space-between, $gap:px);
 }
 .build__title-wrapper {
-    max-width: 621px;
+    max-width: 445px;
 }
 .build__title-line {
     margin-bottom: 54px;
@@ -23,11 +23,14 @@
     @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0, $CLR:$clr-white);
 }
 .build__list {
-    margin-top: 58px;
+    flex-direction: column;
+    @include display($items:start, $space:start, $gap:32px);
 }
 .build__item {
     @include display($items:start, $space:space-between, $gap:23px);
-    margin-bottom: 32px;
+}
+.build__item-content{
+    width: 445px;
 }
 .build__item-title {
     @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:$clr-span);
@@ -37,24 +40,26 @@
 }
 
 // -------Tablet start-------
-@media only screen and (max-width:800px){
+@media only screen and (max-width:954px){
     .build-section{
         background-color: $clr-bold-green;
-        padding: 100px 0 100px;
+        padding: 100px 0 56px 100px;
         background-position: top right;
     }
     .build{
         flex-direction: column;
-        @include display($items:0, $space:start, $gap:64px);
+        @include display($items:start, $space:start, $gap:64px);
     }
     .build__title-wrapper{
-        max-width: 641px;
-        
+        width: 100%;
     }
     .build__title-line{
         margin-bottom: 32px;
     }
-    .build__title{
+    .build__title {
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:$clr-white);
+    }
+    .build__item-content{
         width: 100%;
     }
     .build__item {
@@ -67,10 +72,13 @@
 // -------Tablet end-------
 
 // ----------Mobile start ---------
-@media (max-width:500px){
+@media (max-width:700px){
     .build-section{
+        padding: 100px 0 100px;
         background-color: $clr-bold-green;
-        padding: 64px;
+    }
+    .build__title-wrapper{
+        max-width: 70%;
     }
     .build__list {
         gap: 32px;
@@ -83,12 +91,6 @@
     .build__item-content{
         @include display($items:center, $space:space-between, $gap:8px);
         flex-direction: column;
-
     }
 }
     // ----------Mobile end ---------
-@media (max-width:200px){
-    .build-section{
-        background-color: $clr-bold-green;
-    }
-}

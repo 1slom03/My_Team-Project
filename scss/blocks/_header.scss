@@ -15,6 +15,11 @@
 }
 .header__link {
     @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0, $CLR:$clr-white);
+    transition: all 0.3s linear;
+    
+    &:hover{
+        color: $clr-span;
+    }
 }
 .header__contact-link {
     @include btnStyle($W:153px, $PY:10px, $BorderColor:$clr-white, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px,$BtnMB:0px, $BtnTextColor:$clr-white, $HoverBG:$clr-white, $HoverColor:$clr-green);
@@ -24,6 +29,64 @@
     border: none;
     cursor: pointer;
     display: none;
+}
+
+// --------Modal
+.modal-outer{
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s linear;
+}
+
+.modal-inner{
+    padding: 56px 25px 0 48px;
+    position: fixed;
+    right: -100%;
+    z-index: 51;
+    width: 65%;
+    height: 100vh;
+    right: 0;
+    background-color: $clr-green;
+}
+
+.modal-inner > a {
+    display: inline-block;
+    margin-top: 12px;
+    @include btnStyle($W:159px, $PY:10px, $BorderColor:$clr-white, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px,$BtnMB:0px, $BtnTextColor:$clr-white, $HoverBG:$clr-white, $HoverColor:$clr-green);
+}
+
+.modal__close-btn{
+    background-color: transparent;
+    border: none;
+    display: block;
+    margin-left: auto;
+}
+.modal__item{
+    @include display($items:center, $space:start, $gap:24px);
+}
+.modal__item > a{
+    display: inline-block;
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:24px, $CLR:$clr-white);
+    transition: all 0.3s linear;
+    
+    &:hover{
+        color: $clr-span;
+    }
+}
+.hidden-croll{
+    overflow-y: hidden;
+}
+
+.show-outer{
+    right: 0;
+}
+.show-inner{
+    right: 0;   
 }
 
 // ---------Tablet start -----------

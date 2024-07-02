@@ -1,0 +1,44 @@
+.started-section {
+    padding: 76px 0; 
+    background-color: $clr-span;
+    background-image: url(../../images/started-section-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 144px;
+    background-position: left bottom;
+}
+.started {
+    @include display($items:center, $space:start, $gap:226px);
+    padding-left: 98px;
+}
+.started-title {
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:$clr-bold-green);
+    display: inline-block;
+}
+.started-link {
+    display: inline-block;
+    @include btnStyle($W:153px, $PY:10px, $BorderColor:$clr-bold-green, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px,$BtnMB:0px, $BtnTextColor:$clr-bold-green, $HoverBG:$clr-bold-green, $HoverColor:$clr-span);
+}
+
+// -------Tablet start 
+@media (max-width:1016px){
+    .started-section{
+        padding: 84px;
+    }
+    .started {
+        @include display($items:center, $space:space-between, $gap:0px);
+        padding-left: 98px;
+    }
+}
+
+// ------Mobile start 
+@media (max-width:750px){
+    .started-section{
+        padding: 83px 0;
+    }
+    .started{
+        padding-left: 24px;
+        flex-direction: column;
+        text-align: center;
+        @include display($items:center, $space:start, $gap:24px);
+    }
+}

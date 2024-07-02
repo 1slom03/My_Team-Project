@@ -1,0 +1,27 @@
+.contact-hero-section{
+    padding: 0 0 120px;
+}
+.contact{
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.hero__contact {
+    max-width: 540px;
+    flex-direction: column;
+    @include display($items:start, $space:start, $gap:0px);
+}
+.hero__contact-title {
+    @include textStyle($FS:64px, $FW:700, $LH:100px, $MB:16px, $CLR:$clr-white);
+}
+.hero__contact-text-color {
+    @include textStyle($FS:32px, $FW:700, $LH:48px, $MB:32px, $CLR:$clr-span);
+}
+.hero__contact-content-wrapper {
+    flex-direction: column;
+    @include display($items:start, $space:start, $gap:8px);
+}
+.hero__contact-content {
+    @include display($items:center, $space:start, $gap:23px);
+}
+.hero__contact-content-text {
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:0px, $CLR:$clr-white);
+}
